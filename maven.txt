@@ -1,0 +1,131 @@
+Maven is a build tool and project management tool
+
+maven human readable format system readble format
+
+folder structure
+
+maven dev lap install
+
+java first install ?
+maven (java based application)
+
+
+C:\Users\DELL>java -version
+java version "18.0.1.1" 2022-04-22
+Java(TM) SE Runtime Environment (build 18.0.1.1+2-6)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.1.1+2-6, mixed mode, sharing)
+
+
+C:\Users\DELL>mvn --version
+Apache Maven 3.8.5 (3599d3414f046de2324203b78ddcf9b5e4388aa0)
+Maven home: D:\Other_Softwares\devops_softwatres\maven\apache-maven-3.8.5-bin\apache-maven-3.8.5
+Java version: 18.0.1.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-18.0.1.1
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+
+Project (developer)
+amazon10
+#service frontend
+login page
+payment page
+
+folder structure  ( >mvn archetype:generate)
+code
+
+
+
+once fs is create we have to pass maven goals for validation
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+
+Tips
+mvn archetype:generate
+3000+
+
+2000 build success
+1000
+500
+700
+
+700
+701
+702
+
+fs
+based uo on your lapto config java11 maven
+
+
+*************************************************** 
+
+maven in linux
+
+
+sudo apt-get update
+
+sudo apt-get install default-jdk 
+java --version
+ubuntu@ip-172-31-19-243:~$ java --version
+openjdk 11.0.15 2022-04-19
+OpenJDK Runtime Environment (build 11.0.15+10-Ubuntu-0ubuntu0.20.04.1)
+OpenJDK 64-Bit Server VM (build 11.0.15+10-Ubuntu-0ubuntu0.20.04.1, mixed mode, sharing)
+
+
+maven
+sudo apt-get install maven
+
+ubuntu@ip-172-31-19-243:~$ mvn --version
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.13.0-1022-aws", arch: "amd64", family: "unix"
+
+
+Project start:
+java 8
+.net
+php
+
+ubuntu 20.04
+
+KT knowledge transfer
+https://www.liquidweb.com/kb/how-to-install-and-configure-apache-maven-on-ubuntu-18-04/
+#1 
+sudo vi /etc/profile.d/maven.sh
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/opt/maven3.8
+export MAVEN_HOME=/opt/maven3.8
+export PATH=${M2_HOME}/bin:${PATH}
+
+
+root@ubuntu:~# source /etc/profile.d/maven.sh
+
+ubuntu@ip-172-31-19-243:/opt/maven3.8$ mvn --version
+Apache Maven 3.8.5 (3599d3414f046de2324203b78ddcf9b5e4388aa0)
+Maven home: /opt/maven3.8
+Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.13.0-1022-aws", arch: "amd64", family: "unix"
+ubuntu@ip-172-31-19-243:/opt/maven3.8$
+
+#######################################################
+
+build failures
+1.dependency
+2.permissions
+
+*************************
+
+types of repos
+central
+remote
+local repos
+
+
+
+local repo
+
+
+
