@@ -1,0 +1,53 @@
+flowwing below commands 
+
+a) Step #1: Add MySQL APT Repository in Ubuntu
+> sudo apt update
+b)Install wget on ubuntu if not installed
+> sudo apt install wget -y
+c) Below are commands to add/download latest MySQL APT repository using command line,
+>   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.debCopied!
+d) then, below command is to install above downloaded apt repository,
+> sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+e) Update apt repository
+> sudo apt-get update
+f) now install mysql 5.7 
+> sudo apt-get install mysql-server 
+>  mysql_secure_installation
+
+_----------------------------------
+
+
+Local
+username : root
+
+aws 
+username : admin
+
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'test@123';
+
+mysql -u root -p password
+
+Mysql backup command
+
+mysqldump -u username -p password databasename > /opt/databasename.sql
+
+mysqldump -u root -p information_schema > /opt/information_schema.sql
+
+
+Restoring:
+
+mysql -u username -p password dbname < /opt/databasename.sql
+
+mysql -u root -p mysqllast < /opt/mysql.sql
+
+*****************************************************
+
+table backup
+
+
+mysqldump -u username -p password component databasename > /opt/table.sql
+
+mysqldump -u root -p component mysql /opt/component.sql
