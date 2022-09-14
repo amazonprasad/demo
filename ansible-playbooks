@@ -80,7 +80,7 @@ sudo vi maven.yml
       copy: content="export JAVA_HOME=/usr/lib/jvm/default-java
                                      export M2_HOME=/opt/maven
                                      export MAVEN_HOME=/opt/maven
-                                     export PATH=${M2_HOME}/bin:${PATH" dest=/etc/profile.d/maven.sh
+                                     export PATH=${M2_HOME}/bin:${PATH}" dest=/etc/profile.d/maven.sh
     - name: source profile
       command: sh  /etc/profile.d/maven.sh
 
