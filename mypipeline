@@ -1,0 +1,17 @@
+node{
+    stage('github code download'){
+        git credentialsId: 'cde35db6-0d4e-4157-a230-ee937307b1e2', url: 'https://github.com/amazonprasad/movie_test.git'
+    }
+    stage('maven build'){
+        sh 'mvn clean install'
+    }
+    stage('docker image'){
+        sh 'docker build -t muniprasad1/movie:v1 .'
+    }
+    stage('push docker images'){
+        withCredentials([string(credentialsId: 'pwd-docker', variable: 'passwd')]) {
+            sh "docker login -u muniprasad1 -p ${(passwd)}"
+        }
+        sh 'docker push muniprasad1/movie:v1'
+    }
+}
