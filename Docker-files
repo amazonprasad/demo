@@ -1,0 +1,16 @@
+DOCKER FILE FOR INSTALL APACHETOMCAT
+-------------------------------------
+
+FROM ubuntu:latest
+MAINTAINER prasad <prasad@gmial.com>
+RUN apt-get update
+RUN apt-get install default-jdk -y
+RUN mkdir /opt/tomcat
+WORKDIR /opt/tomcat
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz .
+RUN tar -xvf apache-tomcat-9.0.70.tar.gz
+RUN mv apache-tomcat-9.0.70/* /opt/tomcat
+EXPOSE 8088
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+
+
