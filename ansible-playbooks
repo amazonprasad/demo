@@ -43,7 +43,7 @@ sudo vi muldire.yml
     - '/opt/v1'
     - '/opt/v2'
     - '/opt/v3'
-      file: path=/opt/muniprasad state=directory
+     
       
       
       
