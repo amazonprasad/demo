@@ -1,0 +1,48 @@
+prerequisties:
+
+t2.micro instance
+awscli 
+kubectl
+eksctl
+Iam role:- iamfullacess, ec2fullacess,cloudformationfullaccess,administatorfullaccess
+
+
+
+
+
+
+commands:
+
+kubectl installation:
+--------------------
+
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.2/2023-03-17/bin/linux/amd64/kubectl
+chmod +x kubectl
+mv kubectl /usr/local/bin/
+kubectl version
+
+
+eksctl installation:
+--------------------
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+cd /tmp/
+mv eksctl /usr/local/bin/
+eksctl version
+
+creating cluster
+----------------
+eksctl create cluster --name my-cluster --region ap-south-1 --node-type t2.small
+
+deployment command:
+------------------
+eksctl create deployment web-app --image=nginx --port=80 --replicas=2
+
+service/loadbalancer command:
+----------------------------
+
+eksctl expose deployment web-app --port=80 --type=LoadBalancer
+
+kubectl get all
+
+
+
